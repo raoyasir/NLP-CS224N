@@ -1,0 +1,80 @@
+hrutis-MBP:assignment2 shruti$ python q2_parser_model.py 
+================================================================================
+INITIALIZING
+================================================================================
+Loading data... took 3.45 seconds
+Building parser... took 1.73 seconds
+Loading pretrained embeddings... took 3.20 seconds
+Vectorizing data... took 2.12 seconds
+Preprocessing training data...
+39832/39832 [==============================] - 72s     
+Building model... took 0.33 seconds
+
+2017-04-30 01:41:13.259023: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-04-30 01:41:13.259055: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+2017-04-30 01:41:13.300204: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:865] OS X does not support NUMA - returning NUMA node zero
+2017-04-30 01:41:13.300423: I tensorflow/core/common_runtime/gpu/gpu_device.cc:887] Found device 0 with properties: 
+name: GeForce GT 650M
+major: 3 minor: 0 memoryClockRate (GHz) 0.9
+pciBusID 0000:01:00.0
+Total memory: 1023.69MiB
+Free memory: 162.37MiB
+2017-04-30 01:41:13.300443: I tensorflow/core/common_runtime/gpu/gpu_device.cc:908] DMA: 0 
+2017-04-30 01:41:13.300449: I tensorflow/core/common_runtime/gpu/gpu_device.cc:918] 0:   Y 
+2017-04-30 01:41:13.300468: I tensorflow/core/common_runtime/gpu/gpu_device.cc:977] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GeForce GT 650M, pci bus id: 0000:01:00.0)
+================================================================================
+TRAINING
+================================================================================
+Epoch 1 out of 10
+1848/1848 [==============================] - 47s - train loss: 0.1588       
+Evaluating on dev set - dev UAS: 85.39
+New best dev UAS! Saving model in ./data/weights/parser.weights
+
+Epoch 2 out of 10
+1848/1848 [==============================] - 47s - train loss: 0.1044       
+Evaluating on dev set - dev UAS: 87.48
+New best dev UAS! Saving model in ./data/weights/parser.weights
+
+Epoch 3 out of 10
+1848/1848 [==============================] - 46s - train loss: 0.0912       
+Evaluating on dev set - dev UAS: 88.06
+New best dev UAS! Saving model in ./data/weights/parser.weights
+
+Epoch 4 out of 10
+1848/1848 [==============================] - 46s - train loss: 0.0830       
+Evaluating on dev set - dev UAS: 88.46
+New best dev UAS! Saving model in ./data/weights/parser.weights
+
+Epoch 5 out of 10
+1848/1848 [==============================] - 46s - train loss: 0.0765       
+Evaluating on dev set - dev UAS: 88.34
+
+Epoch 6 out of 10
+1848/1848 [==============================] - 46s - train loss: 0.0717       
+Evaluating on dev set - dev UAS: 88.40
+
+Epoch 7 out of 10
+1848/1848 [==============================] - 46s - train loss: 0.0670       
+Evaluating on dev set - dev UAS: 88.62
+New best dev UAS! Saving model in ./data/weights/parser.weights
+
+Epoch 8 out of 10
+1848/1848 [==============================] - 46s - train loss: 0.0631       
+Evaluating on dev set - dev UAS: 88.61
+
+Epoch 9 out of 10
+1848/1848 [==============================] - 46s - train loss: 0.0597       
+Evaluating on dev set - dev UAS: 88.79
+New best dev UAS! Saving model in ./data/weights/parser.weights
+
+Epoch 10 out of 10
+1848/1848 [==============================] - 46s - train loss: 0.0567       
+Evaluating on dev set - dev UAS: 88.74
+
+================================================================================
+TESTING
+================================================================================
+Restoring the best model weights found on the dev set
+Final evaluation on test set - test UAS: 89.17
+Writing predictions
+Done!

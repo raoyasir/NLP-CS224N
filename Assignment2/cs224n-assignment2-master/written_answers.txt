@@ -1,0 +1,6 @@
+1(c) Briefly explain the purpose of placeholder variables and feed dictionaries in TensorFlow computations
+Ans: Placeholder variables are placeholders for input data. They are used so that the computational graph is somewhat indpendent from the data that flows through it. Feed dictionaries provide the actual input data corresponding to each placeholder at session run time.
+
+1(f) Explain how TensorFlow’s automatic differentiation removes the need for us to define gradients explicitly.
+Ans: Tensorflow defines computations over a directed acyclic graph where nodes are operations. Edges represent data flowing between operations. As long as we know how to compute operations and local gradients at every node, automatic differentiation automatically does forward propogation through the graph and then backpropogates the loss through the nodes using the chain rule of differentiation.
+As a result, we never have to define the overall gradient explicitly.
